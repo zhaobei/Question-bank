@@ -1,0 +1,26 @@
+# 错误env: /etc/init.d/sshd: Permission denied
+
+
+
+其他参考链接1： https://superuser.com/questions/601956/why-is-ssh-permission-denied-unless-sshd-is-in-debug-mode
+
+其他参考链接2: https://bugzilla.redhat.com/show_bug.cgi?id=364971
+
+
+
+
+
+### 问题现象
+
+重启sshd报权限错误，在帖子上看是selinux没有关闭，实际上已经关闭了
+
+
+
+
+
+### 解决
+
+chmod a+x /etc/init.d/sshd
+
+
+
